@@ -26,30 +26,33 @@
 
       <!-- Right Side Paths -->
       <ul class="navbar-nav d-flex">
-        <!-- Current User -->
-        <li class="nav-item">
-          <a class="nav-link disabled" href=""></a>
-        </li>
+        <!-- Check user logged or not -->
+        <% if authorized? %>
+          <!-- Current User -->
+          <li class="nav-item">
+            <a class="nav-link disabled" href=""><%= current_user.username %></a>
+          </li>
 
-        <!-- Profile Path -->
-        <li class="nav-item">
-          <%= link_to "Profile", root_path, class: "nav-link" %>
-        </li>
+          <!-- Profile Path -->
+          <li class="nav-item">
+            <%= link_to "Profile", profile_path, class: "nav-link" %>
+          </li>
 
-        <!-- Sign Out Path -->
-        <li class="nav-item">
-          <%= button_to "SignOut", root_path, method: :delete, class: "nav-link" %>
-        </li>
+          <!-- Sign Out Path -->
+          <li class="nav-item">
+            <%= button_to "Logout", logout_path, method: :delete, class: "nav-link" %>
+          </li>
+          <% else %><!-- If user not logged -->
+          <!-- Sign In Path -->
+          <li class="nav-item">
+            <%= link_to "Login", login_path, class: "nav-link" %>
+          </li>
 
-        <!-- Sign In Path -->
-        <li class="nav-item">
-          <%= link_to "SignIn", root_path, class: "nav-link" %>
-        </li>
-
-        <!-- Sign Up Path -->
-        <li class="nav-item">
-          <%= link_to "SignUp", sign_up_path, class: "nav-link" %>
-        </li>
+          <!-- Sign Up Path -->
+          <li class="nav-item">
+            <%= link_to "Sign Up", registration_path, class: "nav-link" %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>

@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
+  # User Login Routes
+  get 'login', to: 'login#index'
+  post 'login', to: 'login#create'
+  delete 'logout', to: 'login#destroy'
+
   # User Registration Routes
-  get 'sign_up', to: 'registration#index'
-  post 'sign_up', to: 'registration#create'
+  get 'registration', to: 'registration#index'
+  post 'registration', to: 'registration#create'
+
+  # User Profile Route
+  get 'profile', to: 'profile#index'
 
   # Root Route
   root "home#index"
