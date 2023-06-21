@@ -19,7 +19,8 @@ class LoginController < ApplicationController
         # Redirect to Root Page
         redirect_to root_path, notice: 'User Login Successfully!'
       else
-        # When Username and Password incorrect render Login view
+        # When Username and Password incorrect Notify Error & render Login view
+        flash[:notice] = 'Username or Password Incorrect!'
         render :index, status: :unprocessable_entity
       end
     rescue => e
