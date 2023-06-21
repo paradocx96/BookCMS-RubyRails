@@ -7,7 +7,7 @@
   <!-- Sign Up card view Body -->
   <div class="card-body">
     <!-- Error Messages View -->
-    <%= form_with model: @user, url: sign_up_path do |form| %>
+    <%= form_with model: @user, url: registration_path do |form| %>
       <% if @user.errors.any? %>
         <div style="color: red">
           <!-- Showing Count of Errors -->
