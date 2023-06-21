@@ -1,1 +1,65 @@
-<h1>Registration#index</h1>
+<div class="card auth-card">
+  <!-- Sing Up card view header -->
+  <div class="card-header">
+    <h2>Sign up</h2>
+  </div>
+
+  <!-- Sign Up card view Body -->
+  <div class="card-body">
+    <!-- Error Messages View -->
+    <%= form_with model: @user, url: sign_up_path do |form| %>
+      <% if @user.errors.any? %>
+        <div style="color: red">
+          <!-- Showing Count of Errors -->
+          <h5><%= pluralize(@user.errors.count, "error") %> prohibited this user registration!</h5>
+
+          <ul>
+            <!-- Showing Error Messages as List -->
+            <% @user.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <!-- Input Field Name -->
+      <div class="mb-3 form-group">
+        <%= form.text_field :name, class: "form-control", placeholder: "Name" %>
+      </div>
+
+      <!-- Input Field Username -->
+      <div class="mb-3 form-group">
+        <%= form.text_field :username, class: "form-control", placeholder: "Username" %>
+      </div>
+
+      <!-- Input Field Email -->
+      <div class="mb-3 form-group">
+        <%= form.email_field :email, class: "form-control", placeholder: "Email" %>
+      </div>
+
+      <!-- Input Field Password -->
+      <div class="mb-3 form-group">
+        <%= form.password_field :password, class: "form-control", placeholder: "Password" %>
+        <div class="mx-2">
+          <small>
+            <em>- At least 8 characters long</em><br/>
+            <em>- At least one number</em><br/>
+            <em>- At least one lowercase letter</em><br/>
+            <em>- At least one uppercase letter</em><br/>
+            <em>- At least one symbol</em>
+          </small>
+        </div>
+      </div>
+
+      <!-- Input Field Password Confirmation -->
+      <div class="mb-3 form-group">
+        <%= form.password_field :password_confirmation, class: "form-control", placeholder: "Password Confirmation" %>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="mb-3 actions">
+        <%= form.submit "Sign up", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
