@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # User Registration Routes
+  get 'sign_up', to: 'registration#index'
+  post 'sign_up', to: 'registration#create'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  # Root Route
+  root "home#index"
 end
