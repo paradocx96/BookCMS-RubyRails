@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom-dark" data-bs-theme="dark">
+  <div class="container-fluid">
+    <!-- Root Path -->
+    <%= link_to "Book CMS", root_path, class: "navbar-brand" %>
+
+    <!-- Collapse Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- NavBar Paths -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <!-- Left Side Paths -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- Books List Path -->
+        <li class="nav-item">
+          <%= link_to "Books", root_path, class: "nav-link" %>
+        </li>
+
+        <!-- Book Create Path -->
+        <li class="nav-item">
+          <%= link_to "New Book", root_path, class: "nav-link" %>
+        </li>
+      </ul>
+
+      <!-- Right Side Paths -->
+      <ul class="navbar-nav d-flex">
+        <!-- Current User -->
+        <li class="nav-item">
+          <a class="nav-link disabled" href=""></a>
+        </li>
+
+        <!-- Profile Path -->
+        <li class="nav-item">
+          <%= link_to "Profile", root_path, class: "nav-link" %>
+        </li>
+
+        <!-- Sign Out Path -->
+        <li class="nav-item">
+          <%= button_to "SignOut", root_path, method: :delete, class: "nav-link" %>
+        </li>
+
+        <!-- Sign In Path -->
+        <li class="nav-item">
+          <%= link_to "SignIn", root_path, class: "nav-link" %>
+        </li>
+
+        <!-- Sign Up Path -->
+        <li class="nav-item">
+          <%= link_to "SignUp", sign_up_path, class: "nav-link" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
