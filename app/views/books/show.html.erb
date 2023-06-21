@@ -1,0 +1,14 @@
+<!-- Render Book View -->
+<%= render @book %>
+
+<!-- Buttons Group -->
+<div class="btn-group" role="group" aria-label="Basic example">
+  <!-- Buttons for update book information -->
+  <%= link_to "Update this book", edit_book_path(@book), class: "btn btn-success" %>
+
+  <!-- Buttons for books catalog -->
+  <%= link_to "Books Catalog", books_path, class: "btn btn-primary" %>
+
+  <!-- Buttons for remove book -->
+  <%= button_to "Remove this book", @book, data: { confirm: "Are you sure?", turbo_confirm: "Are you sure want to remove the book?" }, method: :delete, class: "btn btn-danger" %>
+</div>
