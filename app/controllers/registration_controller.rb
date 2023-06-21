@@ -4,7 +4,9 @@ class RegistrationController < ApplicationController
     @user = User.new
   end
 
+  ##
   # User Registration Method
+  # POST method for user registration using user model params
   def create
     # Initialized user object with params data
     @user = User.new(user_params)
@@ -29,7 +31,9 @@ class RegistrationController < ApplicationController
 
   private
 
-  # User Params for new user create
+  ##
+  # User Params Method
+  # User parameters for create new user
   def user_params
     params.require(:user).permit(:name, :username, :email, :password, :password_confirmation)
   end
