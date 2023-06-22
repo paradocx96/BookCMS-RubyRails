@@ -1,9 +1,13 @@
-<h1>Create Book</h1>
+<div class="card">
+  <!-- Card view header -->
+  <div class="card-header">
+    <h2>Create Book</h2>
+  </div>
+
+  <!-- Render Book Creation/Update Form View -->
+  <%= render "form", book: @book %>
+</div>
 <br/>
-
-<!-- Render Book Creation/Update Form View -->
-<%= render "form", book: @book %>
-
 
 <!-- Button for Book Catalog -->
 <div>
