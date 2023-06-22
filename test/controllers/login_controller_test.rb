@@ -1,18 +1,28 @@
 require "test_helper"
 
 class LoginControllerTest < ActionDispatch::IntegrationTest
-  test "should get index" do
-    get login_index_url
+  # Test whether login view load
+  test "should view login page" do
+    get login_url
+
+    # Assert Check response is success
     assert_response :success
   end
 
-  test "should get create" do
-    get login_create_url
+  # Test whether user login to application
+  test "should get login" do
+    # Sending username and password to login
+    post login_url, params: { username: 'navinda', password: 'Navinda@123' }
+
+    # Assert Check response is success
     assert_response :success
   end
 
-  test "should get destroy" do
-    get login_destroy_url
+  # Test whether user logout
+  test "should get logout" do
+    delete logout_url
+
+    # Assert Check response is success
     assert_response :success
   end
 end
