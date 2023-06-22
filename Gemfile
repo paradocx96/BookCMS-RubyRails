@@ -21,6 +21,7 @@ gem "bcrypt", "~> 3.1.7"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'dotenv-rails', groups: [:development, :test]
 end
 
 group :development do
