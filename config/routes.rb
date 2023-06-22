@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   # User Profile Route
   get 'profile', to: 'profile#index'
 
+  # Book Routes
+  resources :books
+
   # Root Route
   root "home#index"
 end

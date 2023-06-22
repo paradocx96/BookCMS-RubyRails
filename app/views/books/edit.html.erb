@@ -1,0 +1,19 @@
+<div class="card">
+  <!-- Card view header -->
+  <div class="card-header">
+    <h2>Update Book</h2>
+  </div>
+
+  <!-- Render Book Creation/Update Form View -->
+  <%= render "form", book: @book %>
+</div>
+<br/>
+
+<!-- Buttons Group -->
+<div class="btn-group" role="group" aria-label="Basic example">
+  <!-- Buttons for show book information -->
+  <%= link_to "Show this book", @book, class: "btn btn-success" %>
+
+  <!-- Buttons for books catalog -->
+  <%= link_to "Books Catalog", books_path, class: "btn btn-primary" %>
+</div>

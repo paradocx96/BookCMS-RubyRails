@@ -1,0 +1,31 @@
+<!-- Card -->
+<div class="card mb-3" id="<%= dom_id book %>">
+  <div class="row g-0">
+    <!-- Card Header Section -->
+    <div class="col-md-4">
+      <img src="https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books_23-2149342941.jpg" class="img-fluid rounded-start" alt="Book">
+    </div>
+
+    <!-- Card Body Section -->
+    <div class="col-md-8">
+      <div class="card-body">
+
+        <!-- Book Title -->
+        <h5 class="card-title"><%= book.title %></h5>
+
+        <!-- Book Author-->
+        <p class="card-text"><strong>Author:</strong> <%= book.author %></p>
+
+        <p class="card-text">
+          <small class="text-body-secondary">
+            <!-- Book Genre -->
+            <strong>Genre:</strong> <%= book.genre %>
+            <br/>
+            <!-- Book Publication Year -->
+            <strong>Publication year:</strong> <%= book.publication_year %>
+          </small>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

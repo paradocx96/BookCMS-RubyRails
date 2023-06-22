@@ -1,0 +1,46 @@
+<!-- Card view Body -->
+<div class="card-body">
+  <%= form_with(model: book) do |form| %>
+
+    <!-- Form Validation Errors View -->
+    <% if book.errors.any? %>
+      <div style="color: red">
+
+        <!-- Errors count view -->
+        <h5><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h5>
+
+        <ul>
+          <!-- Errors List view-->
+          <% book.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <!-- Input field book title -->
+    <div class="mb-3 form-group">
+      <%= form.text_field :title, class: "form-control", placeholder: "Title" %>
+    </div>
+
+    <!-- Input field book author -->
+    <div class="mb-3 form-group">
+      <%= form.text_field :author, class: "form-control", placeholder: "Author" %>
+    </div>
+
+    <!-- Input field book genre -->
+    <div class="mb-3 form-group">
+      <%= form.text_field :genre, class: "form-control", placeholder: "Genre" %>
+    </div>
+
+    <!-- Input field book publication year -->
+    <div class="mb-3 form-group">
+      <%= form.number_field :publication_year, class: "form-control", placeholder: "Publication Year" %>
+    </div>
+
+    <!-- Submit button -->
+    <div class="mb-3 form-group">
+      <%= form.submit "Save", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

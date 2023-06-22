@@ -1,4 +1,6 @@
 class CreateUsers < ActiveRecord::Migration[7.0]
+
+  # Database Schema for User table creation migration
   def change
     create_table :users do |t|
       t.string :name

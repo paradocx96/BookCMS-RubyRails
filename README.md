@@ -1,24 +1,19 @@
-# README
+# Book Catalog Management System - Book CMS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Tech Stack
 
-Things you may want to cover:
+|             |
+|-------------|
+| Ruby 3.2.2  |
+| Rails 7.0.5 |
+| Postgresql  |
+| Bootstrap 5 |
 
-* Ruby version
+## Developer
 
-* System dependencies
+|       |                            |
+|-------|----------------------------|
+| Name  | Navinda Chandrasiri        |
+| Email | navindalankesh@hotmail.com |
+| Phone | +94-773973335              |
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

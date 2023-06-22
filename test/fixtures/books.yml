@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: Book Name One
+  author: Book Author One
+  genre: Book Genre One
+  publication_year: 2023
+
+two:
+  title: Book Name Two
+  author: Book Author Two
+  genre: Book Genre Two
+  publication_year: 2023
