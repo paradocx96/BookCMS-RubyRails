@@ -15,5 +15,3 @@
 |-------|----------------------------|
 | Name  | Navinda Chandrasiri        |
 | Email | navindalankesh@hotmail.com |
-| Phone | +94-773973335              |
-
